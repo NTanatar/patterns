@@ -1,7 +1,9 @@
 package com.nata.abstractfactory;
 
 import com.nata.abstractfactory.model.LeftGlove;
+import com.nata.abstractfactory.model.LeftGloveWithBear;
 import com.nata.abstractfactory.model.RightGlove;
+import com.nata.abstractfactory.model.RightGloveWithBear;
 
 public class GreenBearGloveFactory extends GloveFactory {
 
@@ -13,11 +15,15 @@ public class GreenBearGloveFactory extends GloveFactory {
 
     @Override
     public RightGlove createRightGlove() {
-        return new RightGlove(pattern);
+        RightGlove rightGlove = new RightGloveWithBear();
+        rightGlove.applyPattern(pattern);
+        return rightGlove;
     }
 
     @Override
     public LeftGlove createLeftGlove() {
-        return new LeftGlove(pattern);
+        LeftGlove leftGlove = new LeftGloveWithBear();
+        leftGlove.applyPattern(pattern);
+        return leftGlove;
     }
 }

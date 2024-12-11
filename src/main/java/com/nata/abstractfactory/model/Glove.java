@@ -1,12 +1,15 @@
 package com.nata.abstractfactory.model;
 
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 public class Glove {
-    private final String pattern;
+    protected String pattern;
 
-    public Glove(String pattern) {
-        this.pattern = pattern;
+    @Override
+    public String toString() {
+        return pattern;
     }
 }

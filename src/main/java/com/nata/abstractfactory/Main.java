@@ -7,11 +7,11 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         List<Glove> gloves = new ArrayList<>();
-        GloveFactory factory = new BlueFoxGloveFactory("a small fox");
+        GloveFactory factory = new BlueFoxGloveFactory("a small");
         gloves.add(factory.createLeftGlove());
         gloves.add(factory.createRightGlove());
 
-        factory = new GreenBearGloveFactory("a big bear");
+        factory = new GreenBearGloveFactory("a big");
         gloves.add(factory.createLeftGlove());
         gloves.add(factory.createRightGlove());
         System.out.println(gloves);
