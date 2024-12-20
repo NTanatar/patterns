@@ -18,8 +18,8 @@ public class Main {
             new GetNewspapers(entranceHallRobot),
             new PrepareBreakfast(kitchenRobot, "Belgian")
         ));
-
         // in the morning:
+        System.out.println("Morning!");
         alarmClock.triggerAlarm();
     }
 }
