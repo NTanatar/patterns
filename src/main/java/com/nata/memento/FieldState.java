@@ -9,7 +9,7 @@ public enum FieldState {
         return switch (this) {
             case BLACK -> "B";
             case WHITE -> "W";
-            default -> " ";
+            default -> ".";
         };
     }
 }
