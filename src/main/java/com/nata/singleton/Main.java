@@ -8,6 +8,7 @@ public class Main {
         @Override
         public void run() {
             Logger.getLogger(BASE_PATH + "first.log").log("Fooling around");
+            DBConnection.INSTANCE.store("l'aereo");
         }
     }
 
@@ -15,6 +16,7 @@ public class Main {
         @Override
         public void run() {
             Logger.getLogger(BASE_PATH + "second.log").log("Rhabarber");
+            DBConnection.INSTANCE.store("la verdura");
         }
     }
 
@@ -24,5 +26,6 @@ public class Main {
         threadFoo.start();
         threadBar.start();
         Logger.getLogger(BASE_PATH + "third.log").log("main is watching");
+        DBConnection.INSTANCE.store("la poltrona");
     }
 }
